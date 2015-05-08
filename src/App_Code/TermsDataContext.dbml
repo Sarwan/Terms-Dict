@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="TermsDb" Class="TermsDataContextDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=OFFICE-PC\SQLEXPRESS;Initial Catalog=TermsDb;User ID=DbUser" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="TermsDbConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.Classification" Member="Classifications">
+    <Type Name="Classification">
+      <Column Name="ID" Type="System.Byte" DbType="TinyInt NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="NameUyghur" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="NameChinese" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Association Name="Classification_Term" Member="Terms" ThisKey="ID" OtherKey="Classification" Type="Term" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Term" Member="Terms">
+    <Type Name="Term">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Uyghur" Type="System.String" DbType="NChar(512)" CanBeNull="true" />
+      <Column Name="Chinese" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="English" Type="System.String" DbType="NChar(512)" CanBeNull="true" />
+      <Column Name="Classification" Type="System.Byte" DbType="TinyInt NOT NULL" CanBeNull="false" />
+      <Association Name="Classification_Term" Member="Classification1" ThisKey="Classification" OtherKey="ID" Type="Classification" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TermWithCategory" Member="TermWithCategories">
+    <Type Name="TermWithCategory">
+      <Column Name="ID" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Uyghur" Type="System.String" DbType="NChar(512)" CanBeNull="true" />
+      <Column Name="Chinese" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="English" Type="System.String" DbType="NChar(512)" CanBeNull="true" />
+      <Column Name="CategoryUyghur" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+      <Column Name="CategoryChinese" Type="System.String" DbType="NChar(255)" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>

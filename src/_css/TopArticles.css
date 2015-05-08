@@ -1,0 +1,126 @@
+﻿/* File Created: سېنتەبىر 11, 2012 */
+.GFAVCA-KD {
+border: 1px solid #D6D6D6;
+font-family: "alkatip tor tom"،arial, sans-serif;
+margin: 25px 5px 25px 5px;
+min-height: 140px;
+text-decoration: none;
+/*width: 1030px;*/
+}
+
+
+.GFAVCA-NC {
+border-bottom: 1px solid #D6D6D6;
+height: 30px;
+padding: 7px;
+}
+
+.GFAVCA-NE {
+background-color: whiteSmoke;
+background-image: -webkit-gradient(linear, left top, left bottom, from(whiteSmoke), to(#F1F1F1));
+background-image: -webkit-linear-gradient(top, whiteSmoke, #F1F1F1);
+background-image: -moz-linear-gradient(top, whiteSmoke, #F1F1F1);
+background-image: -ms-linear-gradient(top, whiteSmoke, #F1F1F1);
+background-image: -o-linear-gradient(top, whiteSmoke, #F1F1F1);
+background-image: linear-gradient(top, whiteSmoke, #F1F1F1);
+border: 1px solid gainsboro;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+color: #666;
+cursor: pointer;
+display: inline-block;
+float: left;
+font-size: 11px;
+font-weight: bold;
+line-height: 15px;
+padding: 0 5px;
+text-align: center;
+-webkit-transition: all 0.218s;
+-moz-transition: all 0.218s;
+-o-transition: all 0.218s;
+transition: all 0.218s;
+vertical-align: middle;
+-webkit-user-select: none;
+-moz-user-select: none;
+}
+
+
+a {
+text-decoration: none;
+color: #15C;
+cursor: pointer;
+}
+
+.GFAVCA-NC a img {
+margin: 3px 0 0 3px;
+}
+.GFAVCA-NE img {
+opacity: 0.8;
+-ms-filter: "alpha(opacity=80)";
+}
+
+
+.GFAVCA-NE.GFAVCA-PC, .GFAVCA-NE.GFAVCA-PC:hover, .GFAVCA-NE.GFAVCA-PC:active {
+border: 1px solid gainsboro;
+color: #666;
+background-color: #FAFAFA;
+background-image: none;
+-webkit-user-select: none;
+-moz-user-select: none;
+pointer-events: none;
+cursor: default;
+}
+
+
+.GFAVCA-MC {
+color: #666;
+float: left;
+margin: 8px;
+min-width: 58px;
+text-align: right;
+}
+
+.GFAVCA-OC {
+float: right;
+font-size: 15px;
+margin: 8px 16px;
+}
+
+.GFAVCA-AE {
+margin-top: 4px;
+width: 134px;
+position: relative;
+float: right;
+padding-left:5px;
+padding-right: 5px;
+	
+}
+
+a:visited {
+color: #61C;
+}
+shoppingmedia="screen"
+a {
+text-decoration: none;
+color: #15C;
+cursor: pointer;
+}
+
+.GFAVCA-FE {
+margin-top: 18px;
+}
+.GFAVCA-CE {
+margin-left: 10px;
+padding-bottom: 4px;
+max-width: 134px;
+overflow: hidden;
+}
+
+.gwt-Anchor
+{
+    font-family: "alkatip tor";
+    padding-top: 3px;
+    line-height: 130%;
+    font-size: 9pt;
+}

@@ -1,0 +1,339 @@
+﻿@font-face {
+    font-family: 'alkatip_torregular';
+    src: url('fonts/alkatip_tor-webfont.eot');
+    src: url('fonts/alkatip_tor-webfont.eot?#iefix') format('embedded-opentype'),
+         url('fonts/alkatip_tor-webfont.woff') format('woff'),
+         url('fonts/alkatip_tor-webfont.ttf') format('truetype'),
+         url('fonts/alkatip_tor-webfont.svg#alkatip_torregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center, dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend, table, 
+caption, tbody, tfoot, thead, tr, th, td 
+{
+    direction:rtl;
+    font-family: 'alkatip tor','alkatip_torregular','ukij tuz tom','microsoft uighur','DroidSansArabic';
+    }
+
+.AppIconSmall
+{
+     width:48px;
+     height:48px;
+    }
+.SideAppsIcon
+{
+    
+     line-height:65px; 
+     }
+.SideAppsName
+{
+     
+     width:130px;
+     line-height:65px;
+     margin-top:20px; 
+     vertical-align:middle;
+     }
+     
+     .appList
+{
+     float:right;
+}
+
+.appList li
+{
+ display:inline;
+ float:right;
+  margin-right:45px;
+  margin-bottom:10px;
+  text-align:center;
+  width:100px;
+ height:120px;
+     }
+     
+.appList li a
+{
+  text-decoration:none;
+  color:Black;
+     }
+.appList li a:hover
+{
+  text-decoration:none;
+  color:#605f5f;
+     }
+     
+#appListPage
+     {
+          clear:left;
+          margin-top:100px;
+         }
+         
+.AppListPager
+{
+     float:left;
+     border:1px,soild,black;
+     margin-left:20px;
+     direction:ltr;
+    }
+         
+#qrCode img {
+width: 180px;
+height: 180px;
+margin: 10px;
+}
+#qrCodeContiner {
+width: 200px;
+height: 200px;
+background-color: white;
+
+background-position: center;
+background-repeat: no-repeat;
+border-radius: 15px;
+margin-top:5px;
+margin-right: 15px;
+float: left;
+display: inline;
+}
+.shadow {
+-moz-box-shadow: -2px 2px 2px #888;
+-webkit-box-shadow: -2px 2px 2px #888;
+box-shadow: -2px 2px 2px #888;
+
+}
+
+#AppContent
+{
+     padding:10px;
+    }
+ .AppCategory
+ {
+       font-weight:bold;
+     }
+     
+ .AppDescription
+ {
+      padding-top:20px;
+      font-size:11pt;
+     }
+     
+#qrcode
+{
+      padding:10px;
+    }
+#Replay
+{
+     padding:10px;
+    }
+.ReplayHr
+{
+     width:100%;
+
+
+    }
+.ReplayItem
+{
+     margin-top:20px;
+    }
+ .ReplayItem p
+{
+      padding:0px 20px 0px 10px !important;
+    }
+    
+#ReplayTable
+{
+    
+     width:100%;
+     padding:20px;
+     border-width:0px;
+    }
+    
+.ReplayDate
+{
+     font-size:smaller;
+    }
+input, select, option, textarea, button
+{
+    font-family:"alkatip_torregular","alkatip tor","Microsoft Uighur","ukij tuz tom";
+    text-align: right;
+}
+
+.CategorySelection {
+	width: 100%;
+	/*padding: 5px 0;*/
+	outline: none;
+	height: 30px;
+	text-indent: 10px;
+	border:1px solid #adadad;
+	margin-bottom: 10px;
+
+	}
+.CustomButton {
+	float:left;
+	text-indent: 0px;
+	width: 70px;
+	height: 30px;
+	text-align: center;
+   /* background: #4f8aee;*/
+    outline: 0; 
+    cursor: pointer;
+	color: #4f8aee;
+	border:1px solid #3079ed;
+	border-radius: 3px;
+	font-family: "alkatip tor";
+	}
+	
+.appListIcon
+{
+     width:64px;
+     height:64px;
+    }
+    
+/*Text box text area*/
+.SingleLineTextBox {
+	width: 50%;
+	padding: 5px 0;
+	outline: none;
+	height: 19px;
+	text-indent: 10px;
+	border:1px solid #adadad;
+	}
+	
+.SingleLineTextBox:hover{
+	text-indent: 10px;
+	border-top:1px solid #666;
+	border-top:1px solid #7e7e7e;
+	border-top:1px solid #7e7e7e;
+	border-bottom:1px solid #9b9b9b;}	
+	
+.MultiLineTextBox{
+	width: 100%;
+	padding: 5px 0;
+	outline: none;
+	height: 100px;
+	text-indent: 10px;
+	border:1px solid #adadad;}
+	
+.MultiLineTextBox:hover{
+	border-top:1px solid #666;
+	border-top:1px solid #7e7e7e;
+	border-top:1px solid #7e7e7e;
+	border-bottom:1px solid #9b9b9b;}			
+	
+.ButtonStyle {
+	text-indent: 0px;
+	width: 70px;
+	height: 30px;
+	text-align: center;
+    background: #4f8aee;
+    outline: 0; 
+    cursor: pointer;
+	color: #ffffff;
+	border:1px solid #3079ed;
+	border-radius: 3px;
+	margin-top:10px;
+	}
+	
+		
+.ButtonStyle:hover {		
+	background: #689bf0;
+	}
+.TableCenter
+{
+     padding-right:20%;
+    }
+    
+.TdValgin
+{
+     vertical-align:middle;
+    }
+
+/*control panel*/
+.cpTable {
+    width:100%;
+}
+
+/*ArticlePage*/
+#ArticlePageHeader {
+    width:100%;
+    height:45px;
+    text-align: center;
+}
+
+.btnDown {
+    float:left;
+    text-decoration:none;
+}
+
+.btnFaverote {
+    float:right;
+}
+
+#ArticlePageBody {
+    width:100%;
+}
+
+.greenLink {
+padding: 10px;
+background-color: #D14836;
+background-image: -webkit-linear-gradient(top,rgb(57, 185, 18),rgb(34, 153, 4));
+background-image: -moz-linear-gradient(top,#DD4B39,#D14836);
+background-image: -ms-linear-gradient(top,#DD4B39,#D14836);
+background-image: -o-linear-gradient(top,#DD4B39,#D14836);
+background-image: linear-gradient(top,#DD4B39,#D14836);
+box-shadow: 0px 1px 13px 1px #ccc;
+color: #fff;
+font-size: 13px;
+width: 80px;
+text-align: center;
+text-transform: uppercase;
+    /*float: right;*/
+margin-left: 5px;
+margin-right: 5px;
+}
+
+/*Reading.aspx*/
+.PagerControl {
+    display:inline;
+    height: 21px;
+    vertical-align:baseline;
+    font-size:13pt;
+}
+
+#pager {
+    float:left;
+}
+
+#pgNext{
+width: 21px;
+height: 21px;
+background: url(_images/UI/nextButtonBg.png) no-repeat 0px 0px;
+
+/*margin: 3px 0 0 3px;
+opacity: 0.8;
+-ms-filter: "alpha(opacity=80)";*/
+cursor: pointer;
+
+border: 1px solid #dcdcdc;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+}
+
+#pgPre {
+width: 21px;
+height: 21px;
+background: url(_images/UI/preButtonBg.png) no-repeat 0px 0px;
+
+cursor: pointer;
+
+border: 1px solid #dcdcdc;
+-webkit-border-radius: 2px;
+-moz-border-radius: 2px;
+border-radius: 2px;
+}

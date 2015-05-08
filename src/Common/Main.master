@@ -1,0 +1,186 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Common_Main" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ئاتالغۇ ئامبىرى</title>
+    <link href="../_css/style.css" rel="stylesheet" media="screen, projection" />
+
+<script type="text/javascript" src="../_js/jquery-1.3.2.min.js"></script>
+<script type="text/javascript" src="../_js/jquery.bt.js"></script>
+<script type="text/javascript" src="../_js/hoverIntent_minified.js"></script>
+     <link href="../Common/Custom.css" rel="stylesheet" />
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+<!--[if lt IE 9]>
+          <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+    
+</head>
+<body>
+
+    <form id="form1" runat="server" class="search-form">
+<header id="partheader"> 
+
+<nav id="menu">
+     <ul class="navigation">
+         <li><a href="http://library.uycl.net" >ماقالە ئامبىرى</a></li>
+        <li><a href="http://terms.uycl.net" class="current">ئاتالغۇ ئامبىرى</a></li>
+        <li><a href="http://sentence.uycl.net" >جۈملە ئامبىرى</a></li>
+        <li><a href="http://dict.uycl.net" >لۇغەت</a></li>
+    </ul>
+</nav> 
+<div class="partheader_content">
+<a href="Home.aspx" class="logo"><img src="_images/Library_Logo.png" alt="image" title="image" /></a>
+
+<asp:TextBox ID="txtKeyWord" runat="server" CssClass="TermSearchInput"></asp:TextBox>
+<asp:DropDownList ID="ddlLanguage" runat="server" CssClass="LanguageSelection">
+    <asp:ListItem Value="1">ئۇيغۇرچە</asp:ListItem>
+    <asp:ListItem Value="2">ئىنگىلىزچە</asp:ListItem>
+        <asp:ListItem Value="3">خەنزۇچە</asp:ListItem>
+    </asp:DropDownList>
+<asp:Button ID="btnSearch" runat="server" Text="ئىزدەش" CssClass="SideSearchButton" 
+        onclick="btnSearch_Click"></asp:Button>
+    <%--      <input type="text" name="name" id="name" tabindex="10" class="MainSearchInput" >
+         <input type="submit" name="submit" id="submit_search" value="ئىزدەش" tabindex="90">--%>
+    
+</div>
+</header><!-- end #header -->
+<section id="wrapper">
+
+<section id="container">
+    
+<%--<aside id="boxleft">
+	<nav class="block">
+    <a href="Home.aspx">
+      <h3>باش بەت</h3>
+     </a>
+      <ul>
+        <li><a href="Home.aspx?action=recommendation" title="تەۋىسسىيە">تەۋىسسىيە</a></li>
+        <li><a href="Home.aspx?action=newst" title="يېڭى ماقالىلەر">يېڭى ماقالىلەر</a></li>
+        <li><a href="Home.aspx?action=topviewed" title="كۆپ كۆرۈلگەن ماقالىلەر">كۆپ كۆرۈلگەن ماقالىلەر</a></li>
+      </ul>
+      <a href="Search.aspx">
+       <h3>ئىزدەش</h3>
+       </a>
+      <ul>
+        <li>
+        <asp:TextBox ID="txtSideKeyWord" runat="server" CssClass="SideSearchInput"></asp:TextBox>
+        </li>
+        <li>
+        <asp:Button ID="btnSideSearch" runat="server" Text="ئىزدەش" 
+                CssClass="SideSearchButton" onclick="btnSideSearch_Click"></asp:Button>
+        </li>
+        <li><asp:CheckBox ID="cbKeyword" runat="server" Text="ئاچقۇچلۇق سۆزدىن ئىزدەش"></asp:CheckBox></li>
+        <li><asp:CheckBox ID="cbTitle" runat="server" Text="تېمىدىن ئىزدەش"></asp:CheckBox></li>
+      </ul>
+      <a href="Browse.aspx">
+        <h3>كاتالوگ</h3>
+        </a>
+      <ul>
+        <li>
+        <asp:DropDownList ID="ddlFirstCategory" runat="server" AutoPostBack="True" 
+                CssClass="CategorySelection" DataSourceID="odsCategory" DataTextField="NameUy" 
+                DataValueField="ID" ondatabound="ddlFirstCategory_DataBound" 
+                onselectedindexchanged="ddlFirstCategory_SelectedIndexChanged"></asp:DropDownList>
+            
+            <asp:ObjectDataSource ID="odsCategory" runat="server" 
+                SelectMethod="getFirstCategories" 
+                TypeName="net.UyghurDev.Library.CategoryHelper"></asp:ObjectDataSource>
+            
+        </li>
+        <li>
+        <asp:DropDownList ID="ddlSecondCategory" runat="server" AutoPostBack="True" 
+                CssClass="CategorySelection" DataSourceID="odsSecondCategory" 
+                DataTextField="NameUy" DataValueField="ID" 
+                ondatabound="ddlSecondCategory_DataBound" 
+                onselectedindexchanged="ddlSecondCategory_SelectedIndexChanged"></asp:DropDownList>
+           
+            <asp:ObjectDataSource ID="odsSecondCategory" runat="server" 
+                SelectMethod="getSecondCategories" 
+                TypeName="net.UyghurDev.Library.CategoryHelper">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="ddlFirstCategory" DefaultValue="0" 
+                        Name="FirstCategoryID" PropertyName="SelectedValue" Type="Int32" />
+                </SelectParameters>
+            </asp:ObjectDataSource>
+           
+        </li>
+        <li>
+        <asp:DropDownList ID="ddlThirdCategory" runat="server" CssClass="CategorySelection" 
+                DataSourceID="odsThirdCategory" DataTextField="NameEn" DataValueField="ID" 
+                onselectedindexchanged="ddlThirdCategory_SelectedIndexChanged" 
+                AutoPostBack="True" ondatabound="ddlThirdCategory_DataBound"></asp:DropDownList>
+            <asp:ObjectDataSource ID="odsThirdCategory" runat="server" 
+                SelectMethod="getThirdCategories" 
+                TypeName="net.UyghurDev.Library.CategoryHelper">
+                <SelectParameters>
+                    <asp:ControlParameter ControlID="ddlSecondCategory" DefaultValue="0" 
+                        Name="SecondCategoryID" PropertyName="SelectedValue" Type="Int32" />
+                </SelectParameters>
+            </asp:ObjectDataSource>
+        </li>
+      </ul>
+    </nav>
+</aside><!-- end #boxright --> --%>
+    
+<section id="content">        
+	        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+</section><!-- end #content -->	
+
+</section><!-- end #container -->
+
+<footer id="partfooter">
+	<div id="footer_content">
+	<p>
+    شىنجاڭ مىللىيچە-خەنزۇچە تەرجىمە تەتقىقات مەركىزى
+    <br />
+    «تەرجىمە ماقالىلىرى ئامبىرى قۇرۇش تەتقىقات» تۈرى
+    </p>
+	<p>©2012-2013. All right reserved<a href="http://terms.uycl.net/" target="_blank">terms.uycl.net</a></p>
+    <p><span dir=ltr>新疆民汉语文翻译研究中心</span>
+    <br />
+    <span dir=ltr>《翻译文献资源库构建研究》项目</span>
+    </p>
+<p>新ICP备14001535号-1</p>
+    </div>
+</footer><!-- end #footer-->
+
+</section><!-- end #wrapper-->
+
+<script type='text/javascript'>
+    $('.navigation a').bt({
+        showTip: function (box) {
+            $(box).fadeIn(500);
+        },
+        hideTip: function (box, callback) {
+            $(box).animate({ opacity: 0 }, 500, callback);
+        },
+
+        shrinkToFit: true,
+        hoverIntentOpts: {
+            interval: 0,
+            timeout: 0
+        }
+    });
+</script>
+
+
+
+
+    </form>
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-274129-31', 'uycl.net');
+  ga('send', 'pageview');
+
+</script>
+</body>
+</html>
